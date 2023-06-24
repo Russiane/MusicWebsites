@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="../assets/image/icon-page.png">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/reponsive.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/global-style.css">
+    <link rel="stylesheet" href="../assets/css/header-index.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            background-position-y: -100px;
+            height: 100%;
+            min-height: 1000px;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: #9a9cff;
+            background-position-x: -70px;
+            background-image: url('../assets/image/bg-login.jpeg');
+            background-size: contain;
+        }
+
+        .form-control {
+            height: 40px;
+            box-shadow: none;
+            color: #7c2bcd;
+            
+        }
+
+        .form-control::placeholder {
+            color: #d5b6f4;
+        }
+
+        .form-control:focus {
+            border-color: #a072cd;
+        }
+
+        .form-control,
+        .btn {
+            border-radius: 3px;
+        }
+
+        .signup-form {
+            /* font-family: 'Roboto', sans-serif; */
+            width: 400px;
+            margin: 0 auto;
+            padding: 0;
+            padding-top: 150px;
+            font-size: 15px;
+            height: auto;
+            
+        }
+
+        .signup-form h2 {
+            color: #8f51cc;
+            margin: 0 0 5px;
+            position: relative;
+            text-align: center;
+            text-shadow: 1.5px 1px #340263;
+            font-size: 28px;
+        }
+
+        /* .signup-form h2:before,
+        .signup-form h2:after {
+            content: "";
+            height: 2px;
+            width: 30%;
+            background: #8f51cc;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+        } */
+
+        .signup-form h2:before {
+            left: 0;
+        }
+
+        .signup-form h2:after {
+            right: 0;
+        }
+
+        .signup-form .hint-text {
+            color: #a072cd;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: small;
+        }
+
+        .signup-form form {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: #fff;
+            box-shadow: 10px 10px 17px 2px #340263;
+            padding: 30px;
+            padding-bottom: 30px;
+        }
+
+        .signup-form form input {
+            border-radius: 10px;
+            border: 1px solid #cea7f3;
+            /* box-shadow: 8px 8px 8px 0.1px #4c0391; */
+        }
+
+        .signup-form .form-group {
+            margin-bottom: 14px;
+        }
+
+        .signup-form input[type="checkbox"] {
+            margin-top: 8px;
+            box-shadow: none;
+        }
+
+        .signup-form button {
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 140px;
+            outline: none !important;
+            border-radius: 10px;
+            background-color: #c289f7;
+            border: none;
+            /* box-shadow: 5px 10px 10px 0.1px rgb(246, 32, 139); */
+            box-shadow: 8px 8px 8px 0.1px #4c0391;
+            text-shadow: 2px 2px #340263;
+        }
+
+        .signup-form button:hover {
+            background-color: #8f3adf;
+            transition: .3s linear;
+            box-shadow: 8px 8px 8px 0.1px #340263;
+            text-shadow: 2px 2px #1f013b;
+        }
+
+        .signup-form button:active {
+            background-color: #fa65b1;
+            transition: .3s linear;
+            box-shadow: 5px 10px 10px 0.1px rgb(245, 152, 199);
+        }
+
+        .signup-form .row div:first-child {
+            padding-right: 10px;
+        }
+
+        .signup-form .row div:last-child {
+            padding-left: 10px;
+        }
+
+        .signup-form a {
+            color: #a072cd;
+            text-decoration: underline;
+        }
+
+        .signup-form a:hover {
+            text-decoration: none;
+            color: #fff;
+            transition: .3s linear;
+        }
+
+        .signup-form form a {
+            color: #6a08c6;
+            text-decoration: none;
+        }
+
+        .signup-form form a:hover {
+            text-decoration: underline;
+        }
+
+        .show-password-toggle {
+            display: none;
+            background-color: white;
+
+        }
+        .form-check-label{
+            font-size: small;
+            margin-left: 30px;
+            margin-top: 10px;
+            color: #a072cd;
+        }
+        .text-center {
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .text-center a {
+            color: #6a08c6;
+        }
+
+        .text-center a:hover {
+            text-decoration: underline;
+            color: deeppink;
+            transition: .3s linear;
+        }
+
+        @media (min-width: 374px) and (max-width:575px) {
+
+            .nav__bar-btn {
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .header-area {
+            /* height: 80px; */
+            position: fixed;
+            margin-top: 0;
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="login.html" class="logo">
+                            <div class="logo-header">
+                                <p style="color: #fa65b1;">SpaceLi</p>
+                                <p style="color: #726ae3;">f</p>
+                                <p style="color: #f58c56;">e</p>
+                            </div>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="../index.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="about.html">About</a></li>
+                            <li class="scroll-to-section"><a href="../Web-music/index.html">Services</a></li>
+                            <li class="scroll-to-section"><a href="../html/contact.html">Contact</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="login.html">Login</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="signup-form">
+        <form action="/examples/actions/confirmation.php" method="post" id="registration-form"
+            onsubmit="validateForm()">
+            <h2>SIGN UP</h2>
+            <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name"
+                            required="required"></div>
+                    <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name"
+                            required="required"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Password"
+                        required="required" oninput="handlePasswordInput()">
+                    <!-- <div class="input-group-append">
+                        <span class="input-group-text show-password-toggle" id="password-toggle"
+                            onclick="togglePasswordVisibility()">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" id="confirm-password" name="confirm_password"
+                        placeholder="Confirm Password" required="required" oninput="handlePasswordInput()">
+                    <!-- <div class="input-group-append">
+                        <span class="input-group-text show-password-toggle" id="confirm-password-toggle"
+                            onclick="togglePasswordVisibility()">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-check-label"><input type="checkbox" required="required" id="check-box-agree"> I
+                    accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg btn-block">Sign up now</button>
+            </div>
+        </form>
+        <div class="text-center">Already have an account? <a href="login.html">Log in</a></div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirm-password");
+            var passwordToggle = document.getElementById("password-toggle");
+            var confirmPasswordToggle = document.getElementById("confirm-password-toggle");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                confirmPasswordInput.type = "text";
+                passwordToggle.classList.remove("far fa-eye");
+                passwordToggle.classList.add("fa-eye-slash fa-eye");
+                confirmPasswordToggle.classList.remove("far fa-eye");
+                confirmPasswordToggle.classList.add("fa-eye-slash fa-eye");
+            } else {
+                passwordInput.type = "password";
+                confirmPasswordInput.type = "password";
+                passwordToggle.classList.remove("fa-eye-slash fa-eye");
+                passwordToggle.classList.add("far fa-eye");
+                confirmPasswordToggle.classList.remove("fa-eye-slash fa-eye");
+                confirmPasswordToggle.classList.add("far fa-eye");
+            }
+        }
+
+        function handlePasswordInput() {
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirm-password");
+            var passwordToggle = document.getElementById("password-toggle");
+            var confirmPasswordToggle = document.getElementById("confirm-password-toggle");
+
+            if (passwordInput.value.length > 0) {
+                passwordToggle.style.display = "inline-block";
+            } else {
+                passwordToggle.style.display = "none";
+            }
+
+            if (confirmPasswordInput.value.length > 0) {
+                confirmPasswordToggle.style.display = "inline-block";
+            } else {
+                confirmPasswordToggle.style.display = "none";
+            }
+        }
+
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password === confirmPassword) {
+                alert("Mật khẩu hợp lệ. Đăng ký thành công!");
+                // Gửi dữ liệu đăng ký đến server hoặc thực hiện các hành động khác ở đây.
+            } else {
+                alert("Mật khẩu không trùng khớp. Vui lòng nhập lại.");
+            }
+        }
+    </script>
+</body>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/owl-carousel.js"></script>
+<script src="../assets/js/animation.js"></script>
+<script src="../assets/js/imagesloaded.js"></script>
+<script src="../assets/js/custom.js"></script>
+
+</html>
