@@ -87,6 +87,9 @@ responsive
     form#contact {
       padding: 45px;
     }
+      .main-banner .left-content h2 {
+      font-size: 550px;
+    }
   }
   
   @media (max-width: 767px) {
@@ -168,5 +171,8 @@ responsive
     }
     form#contact {
       padding: 30px;
+    }
+      .main-banner .left-content h2 {
+      font-size: 40px;
     }
   }
