@@ -176,3 +176,34 @@ responsive
       font-size: 40px;
     }
   }
+
+@media (max-width: 1200px){
+    #rocket-image{
+      margin-top: -20px;
+      height: 520px;
+    }
+  }
+  @media (max-width: 950px){
+    #rocket-image{
+      margin-top: 20px;
+      height: 520px;
+    }
+  }
+  @media (max-width: 700px){
+    #rocket-image{
+      margin-top: 20px;
+      height: 530px;
+    }
+  }
+  @media (max-width: 500px){
+    #rocket-image{
+      margin-top: 20px;
+      height: 400px;
+    }
+  }
+  @media (max-width: 400px){
+    #rocket-image{
+      margin-top: 20px;
+      height: 300px;
+    }
+  }
