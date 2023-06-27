@@ -1,0 +1,60 @@
+.kind{
+    width: 75%;
+    margin-top: 70px;
+    margin-left: 5%;
+    margin-bottom: 70px;
+}
+
+.kind .row{
+    margin-top: 30px;
+    
+}
+.kind .row .col{
+    width: 80px;
+    height: 60px;
+    text-align: center;
+}
+.kind .tag{
+    width: 100%;
+    height: 80%;
+    padding: 8px;
+    box-shadow: 5px 7px 5px 1px #212121;
+    border-radius: 17px;
+}
+.kind .tag:hover{
+   scale: 110%;
+   box-shadow: 5px 7px 5px 1px #212121;
+   transition: .3s linear;
+}
+.kind .tag a{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 2px 2px #212121;
+    font-size: 22px;
+    font-weight: bolder;
+}
+.kind .tag a:hover{
+    color: #212121;
+    text-shadow: 2px 2px #faf7f7;
+    transition: .3s linear;
+}
+.kind .nhac-viet{
+    background-color: #f56a9f;
+}
+.kind .nhac-us{
+    background-color: #f2f883;
+}
+.kind .nhac-kpop{
+    background-color: #5df6c3;
+}
+.kind .nhac-rap{
+    background-color: #69f3f5;
+}
+
+/* reponsive  */
+@media only screen and (max-width:408px){
+    .kind .tag a{
+        font-size: 18px;
+    }
+}
+
