@@ -1,13 +1,10 @@
 /* Chart  */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .container {
-    /* font-family: 'Urbanist', sans-serif; */
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    /* height: 100%; */
     max-width: 1000px;
     max-height: 320px;
     display: flex;
@@ -16,8 +13,6 @@
     align-items: center;
     flex-direction: column;
     margin-top: 70px;
-    /* border: 1px solid #fff; */
-    /* margin-left: 5%; */
     margin-bottom: 50px;
     overflow-x: hidden;
     
@@ -59,30 +54,19 @@
  .cards .card {
     position: relative;
     height: 100%;
-    background-color: #323444;
-    background-color: #1c1c1c;
-    /* background-color: #381977; */
     background-color: #9934f1;
-    /* background-color: #7250be; */
     border-radius: 10px;
     padding: 15px 20px;
     display: flex;
     justify-content: space-around;
 }
 
- /* .card .image {
-    display: flex;
-    justify-content: space-between;
-} */
  .card .image {
-    /* display: block; */
     justify-content: center;
 }
  .card .image img {
     border-radius: 5px;
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
     box-shadow: 15px 15px 28px rgba(0, 0, 0, 50%);
-    /* box-shadow: 2px 2px 10px rgba(136, 136, 136, 0.5); */
     width: 120px;
     height: 120px;
     object-fit: cover;
@@ -108,7 +92,6 @@
  .card .infos {
     display: block;
     text-align: end;
-    /* padding-top: 30px; */
     padding-left: 20px;
 }
 
@@ -129,9 +112,10 @@
     font-weight: bold;
 }
 
- .infos .name_singer {
+ .infos .subtitle {
     font-size: 15.5px;
     color: #ECEAED;
+    font-weight: 500;
 }
 
 
@@ -164,9 +148,7 @@
 #s5:checked~.cards #slide5 {
     box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
     transform: translate3d(0, 0, 0);
-    /* --current-color1: #fad00c; */
     --current-color1: #f8bfca;
-    /* --current-color1: #f3f785; */
     --current-color2: #ECEAED;
 }
 
@@ -194,40 +176,50 @@
 
 /* reponsive  */
 @media only screen and (max-width:46.1875em){
-     .cards label {
-        width: 280px;
-        height: 140px;
+    .container {
+        max-height: 520px;
     }
-     .cards label li {
-        width: 280px;
-        height: 140px;
-    }
-    .card .image img {
-        width: 100px;
-        height: 100px;
-        margin-top: 5px;
-        margin-left: -5px;
-    }
-    .card .bi {
-        font-size: 20px;
-        margin-top: 35px;
-        margin-left: -65px;
-    }
-    .card .infos {
-        padding-left: 5px;
+     .cards {
+        height: 320px;
     }
     
-     .infos .number {
-        font-size: 17px;
+     .cards label {
+        width: 210px;
+        height: 260px;
+    }
+     .cards label li {
+        width: 210px;
+        height: 260px;
+    }
+    
+     .cards .card {
+        background-color: #9934f1;
+        padding: 10px 15px;
+        display: block;
+    }
+    
+     .card .image img {
+        width: 180px;
+        height: 120px;
+        margin-top: 5px;
+    }
+    .card .bi {
+        margin-top: 40px;
+        margin-left: -100px;
+    }
+    
+     .card .infos {
+        padding-left: 0px;
+        margin-top: 10px;
     }
     
      .infos .name_song {
-        font-size: 14px;
-        margin-bottom: 4px;
+        font-size: 15px;
     }
     
-     .infos .name_singer {
+     .infos .subtitle {
         font-size: 13px;
+        font-weight: 500;
     }
 }
 
