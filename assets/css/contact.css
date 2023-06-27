@@ -174,9 +174,9 @@ CONTACT
       height: 250x;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 380px) {
     form#contact #map iframe{
-      width: 250px;
+      width: 230px;
       height: 250px;
     }
   }
